@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Jay-Khar Construction logo</title>
+  <desc id="desc">Blue JK monogram under a roof shape.</desc>
+  <defs>
+    <linearGradient id="logoBlue" x1="250" y1="120" x2="690" y2="890" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1157db"/>
+      <stop offset="0.42" stop-color="#07358e"/>
+      <stop offset="1" stop-color="#001952"/>
+    </linearGradient>
+    <filter id="softShadow" x="-16%" y="-10%" width="136%" height="136%">
+      <feDropShadow dx="14" dy="18" stdDeviation="12" flood-color="#000" flood-opacity="0.26"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" fill="#fff"/>
+  <g filter="url(#softShadow)">
+    <path
+      d="M172 348h224v38H172L512 118l340 268H704L594 570l122 254H596L486 582v145c0 112-84 159-186 159-114 0-198-58-198-171V612h126v93c0 49 23 75 69 75 47 0 72-27 72-78V386H172v-38Z"
+      fill="#fff"
+      transform="translate(16 18)"
+    />
+    <path
+      d="M172 348h224v38H172L512 118l340 268H704L594 570l122 254H596L486 582v145c0 112-84 159-186 159-114 0-198-58-198-171V612h126v93c0 49 23 75 69 75 47 0 72-27 72-78V386H172v-38Z"
+      fill="url(#logoBlue)"
+    />
+    <path
+      d="M504 386h100l-100 167V386Z"
+      fill="#fff"
+      opacity="0.96"
+    />
+  </g>
+</svg>
