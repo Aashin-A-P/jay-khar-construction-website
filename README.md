@@ -59,3 +59,5 @@ Add the same mail variables from `.env.local.example` in Vercel Project Settings
 ## Legacy Folders
 
 The old `frontend/` Vite app and `backend/` PHP API remain in the repository for reference during migration. The root Next.js app is now the deployment target.
+# jay-khar-construction-website
+Construction Company Website
