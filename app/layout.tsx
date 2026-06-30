@@ -10,9 +10,8 @@ export const metadata: Metadata = {
   title: 'Jay-Khar Construction Pvt. Ltd.',
   description: 'Residential, commercial, and institutional construction services across South India.',
   icons: {
-    icon: '/logojk.png',
-    shortcut: '/logojk.png',
-    apple: '/logojk.png',
+    icon: '/jk-logo.svg',
+    shortcut: '/jk-logo.svg',
   },
 };
 

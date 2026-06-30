@@ -31,7 +31,7 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-3">
             <span className="grid h-14 w-14 place-items-center overflow-hidden rounded bg-white shadow-sm ring-1 ring-stone-200">
-              <img className="h-12 w-12 object-contain" src="logojk.png" alt="Jay-Khar Construction logo" />
+              <img className="h-12 w-12 object-contain" src="/jk-logo.svg" alt="Jay-Khar Construction logo" />
             </span>
             <span>
               <span className="block font-display text-lg font-extrabold leading-tight text-ink">Jay-Khar</span>
