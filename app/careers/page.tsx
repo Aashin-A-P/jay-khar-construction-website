@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Upload } from 'lucide-react';
 import type { FormEvent, ReactNode } from 'react';
 import { useState } from 'react';
 import { FormStatus } from '@/components/FormStatus';
@@ -16,18 +16,19 @@ function Field({ label, children, span = false }: { label: string; children: Rea
 
 export default function CareersPage() {
   const [status, setStatus] = useState<{ message?: string; error?: string }>({});
+  const [submitting, setSubmitting] = useState(false);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus({});
+    setSubmitting(true);
     const formElement = event.currentTarget;
-    const form = Object.fromEntries(new FormData(formElement));
+    const form = new FormData(formElement);
 
     try {
       const response = await fetch('/api/careers', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: form,
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok) throw new Error(payload?.message ?? 'Unable to submit application.');
@@ -35,6 +36,8 @@ export default function CareersPage() {
       setStatus({ message: 'Your application has been submitted.' });
     } catch (error) {
       setStatus({ error: error instanceof Error ? error.message : 'Unable to submit application.' });
+    } finally {
+      setSubmitting(false);
     }
   }
 
@@ -48,7 +51,7 @@ export default function CareersPage() {
         </div>
       </section>
       <section className="section">
-        <form onSubmit={submit} className="mx-auto max-w-5xl overflow-hidden rounded border border-stone-200 bg-white shadow-lift">
+        <form onSubmit={submit} encType="multipart/form-data" className="mx-auto max-w-5xl overflow-hidden rounded border border-stone-200 bg-white shadow-lift">
           <div className="border-b border-stone-200 bg-cement px-6 py-6">
             <p className="eyebrow">Application form</p>
             <h2 className="mt-2 font-display text-3xl font-extrabold text-ink">Share your work profile.</h2>
@@ -87,11 +90,30 @@ export default function CareersPage() {
             <Field label="Experience details" span>
               <textarea className="input" name="message" rows={6} placeholder="Mention previous projects, site responsibilities, software skills, or availability." />
             </Field>
+            <Field label="Resume" span>
+              <div className="rounded border border-dashed border-stone-300 bg-stone-50 p-5">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex items-start gap-3">
+                    <Upload className="mt-1 shrink-0 text-brass" size={22} />
+                    <div>
+                      <p className="font-bold text-ink">Attach your resume</p>
+                      <p className="mt-1 text-sm leading-6 text-steel">Accepted formats: PDF, DOC, or DOCX. Maximum size: 5 MB.</p>
+                    </div>
+                  </div>
+                  <input
+                    className="block w-full text-sm text-steel file:mr-4 file:rounded file:border-0 file:bg-ink file:px-4 file:py-2.5 file:text-sm file:font-bold file:text-white hover:file:bg-forest sm:max-w-sm"
+                    name="resume"
+                    type="file"
+                    accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                  />
+                </div>
+              </div>
+            </Field>
           </div>
           <div className="border-t border-stone-200 bg-stone-50 p-6">
             <FormStatus {...status} />
-            <button className="btn-primary mt-4 w-full sm:w-auto" type="submit">
-              Submit Application <ArrowRight size={18} />
+            <button className="btn-primary mt-4 w-full disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto" type="submit" disabled={submitting}>
+              {submitting ? 'Submitting...' : 'Submit Application'} <ArrowRight size={18} />
             </button>
           </div>
         </form>

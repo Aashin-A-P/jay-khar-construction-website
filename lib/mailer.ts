@@ -1,6 +1,11 @@
 import nodemailer from 'nodemailer';
 
 type FieldMap = Record<string, unknown>;
+type MailAttachment = {
+  filename: string;
+  content: Buffer;
+  contentType?: string;
+};
 
 function stringValue(value: unknown) {
   const text = String(value ?? '').trim();
@@ -31,7 +36,7 @@ function textMessage(intro: string, fields: FieldMap) {
   return [intro, '', ...Object.entries(fields).map(([label, value]) => `${label}: ${stringValue(value)}`)].join('\n');
 }
 
-export async function notify(subject: string, fields: FieldMap, intro: string) {
+export async function notify(subject: string, fields: FieldMap, intro: string, attachments: MailAttachment[] = []) {
   if (process.env.MAIL_ENABLED !== 'true') {
     return;
   }
@@ -60,5 +65,6 @@ export async function notify(subject: string, fields: FieldMap, intro: string) {
     subject,
     text: textMessage(intro, fields),
     html: htmlMessage(subject, intro, fields),
+    attachments,
   });
 }
