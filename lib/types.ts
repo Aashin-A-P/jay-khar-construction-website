@@ -9,6 +9,7 @@ export type Project = {
   description: string;
   featured: boolean;
   status?: 'draft' | 'published';
+  archive?: boolean;
   images: ProjectImage[];
 };
 

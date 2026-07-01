@@ -13,18 +13,18 @@ const services: Array<[string, LucideIcon, string]> = [
 export default function ServicesPage() {
   return (
     <>
-      <section className="bg-ink text-white">
+      <section className="bg-graphite text-ivory">
         <div className="section">
           <p className="eyebrow">Services</p>
           <h1 className="mt-4 max-w-4xl font-display text-5xl font-extrabold">Construction services for dream homes and dependable buildings.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">From design support to complete construction, Jay-Khar Construction helps clients move from idea to handover with confidence.</p>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-steel">From design support to complete construction, Jay-Khar Construction helps clients move from idea to handover with confidence.</p>
         </div>
       </section>
       <section className="section grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {services.map(([title, Icon, copy]) => (
-          <article className="rounded border border-stone-200 bg-white p-7 shadow-sm" key={title}>
+          <article className="rounded border border-borderdark bg-graphite p-7 shadow-sm" key={title}>
             <Icon className="text-brass" size={32} />
-            <h2 className="mt-5 font-display text-2xl font-extrabold text-ink">{title}</h2>
+            <h2 className="mt-5 font-display text-2xl font-extrabold text-ivory">{title}</h2>
             <p className="mt-4 leading-7 text-steel">{copy}</p>
           </article>
         ))}

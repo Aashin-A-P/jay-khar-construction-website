@@ -8,7 +8,7 @@ import { FormStatus } from '@/components/FormStatus';
 function Field({ label, children, span = false }: { label: string; children: ReactNode; span?: boolean }) {
   return (
     <label className={span ? 'sm:col-span-2' : ''}>
-      <span className="mb-2 block text-sm font-bold text-ink">{label}</span>
+      <span className="mb-2 block text-sm font-bold text-ivory">{label}</span>
       {children}
     </label>
   );
@@ -43,18 +43,18 @@ export default function CareersPage() {
 
   return (
     <>
-      <section className="bg-ink text-white">
+      <section className="bg-graphite text-ivory">
         <div className="section">
           <p className="eyebrow">Careers</p>
           <h1 className="mt-4 max-w-4xl font-display text-5xl font-extrabold">Build your career with a hands-on construction team.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">Jay-Khar Construction welcomes fresh graduates and experienced professionals in construction, supervision, planning, and site execution.</p>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-steel">Jay-Khar Construction welcomes fresh graduates and experienced professionals in construction, supervision, planning, and site execution.</p>
         </div>
       </section>
       <section className="section">
-        <form onSubmit={submit} encType="multipart/form-data" className="mx-auto max-w-5xl overflow-hidden rounded border border-stone-200 bg-white shadow-lift">
-          <div className="border-b border-stone-200 bg-cement px-6 py-6">
+        <form onSubmit={submit} encType="multipart/form-data" className="mx-auto max-w-5xl overflow-hidden rounded border border-borderdark bg-graphite shadow-lift">
+          <div className="border-b border-borderdark bg-forest px-6 py-6">
             <p className="eyebrow">Application form</p>
-            <h2 className="mt-2 font-display text-3xl font-extrabold text-ink">Share your work profile.</h2>
+            <h2 className="mt-2 font-display text-3xl font-extrabold text-ivory">Share your work profile.</h2>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-steel">Tell us your background, preferred area of work, and construction-site experience.</p>
           </div>
           <div className="grid gap-5 p-6 sm:grid-cols-2">
@@ -91,17 +91,17 @@ export default function CareersPage() {
               <textarea className="input" name="message" rows={6} placeholder="Mention previous projects, site responsibilities, software skills, or availability." />
             </Field>
             <Field label="Resume" span>
-              <div className="rounded border border-dashed border-stone-300 bg-stone-50 p-5">
+              <div className="rounded border border-dashed border-brass/40 bg-ink p-5">
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex items-start gap-3">
                     <Upload className="mt-1 shrink-0 text-brass" size={22} />
                     <div>
-                      <p className="font-bold text-ink">Attach your resume</p>
+                      <p className="font-bold text-ivory">Attach your resume</p>
                       <p className="mt-1 text-sm leading-6 text-steel">Accepted formats: PDF, DOC, or DOCX. Maximum size: 5 MB.</p>
                     </div>
                   </div>
                   <input
-                    className="block w-full text-sm text-steel file:mr-4 file:rounded file:border-0 file:bg-ink file:px-4 file:py-2.5 file:text-sm file:font-bold file:text-white hover:file:bg-forest sm:max-w-sm"
+                    className="block w-full text-sm text-steel file:mr-4 file:rounded file:border-0 file:bg-brass file:px-4 file:py-2.5 file:text-sm file:font-bold file:text-ink hover:file:bg-ivory sm:max-w-sm"
                     name="resume"
                     type="file"
                     accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
@@ -110,7 +110,7 @@ export default function CareersPage() {
               </div>
             </Field>
           </div>
-          <div className="border-t border-stone-200 bg-stone-50 p-6">
+          <div className="border-t border-borderdark bg-ink p-6">
             <FormStatus {...status} />
             <button className="btn-primary mt-4 w-full disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto" type="submit" disabled={submitting}>
               {submitting ? 'Submitting...' : 'Submit Application'} <ArrowRight size={18} />

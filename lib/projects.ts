@@ -12,96 +12,81 @@ function images(paths: string[], baseAlt: string, startId: number): ProjectImage
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'Modern Residential Elevations',
-    slug: 'modern-residential-elevations',
+    title: 'Residential Elevations',
+    slug: 'residential-elevations',
     category: 'Residential',
     location: 'South India',
     project_year: 2025,
-    short_description: 'Contemporary home elevations with clean massing, balconies, parking, and practical family-focused layouts.',
+    short_description: 'A curated gallery of independent home, duplex, and family residence elevation concepts.',
     description:
-      'A curated set of modern residential elevation concepts prepared for independent homes. The designs focus on balanced frontage, usable balconies, shaded openings, car parking, and a contemporary exterior language that can be adapted to different plot sizes.',
+      'Residential elevation concepts prepared for a range of client briefs, including modern homes, traditional residences, compact frontage studies, duplex-style layouts, balconies, verandahs, parking, and facade variations suited to different site conditions.',
     featured: true,
     status: 'published',
     images: images(
       [
-        '/Elevations/LalView.jpg',
-        '/Elevations/PastorSathiya.jpg',
-        '/Elevations/FinalLuise.jpg',
-        '/Elevations/Friend.jpg',
-        '/Elevations/View-05 (1).jpg',
-        '/Elevations/IMG-20200318-WA0002.jpg',
-        '/Elevations/IMG-20200505-WA0003.jpg',
-        '/Elevations/IMG-20200625-WA0007.jpg',
-        '/Elevations/WhatsApp Image 2020-11-01 at 10.26.26 PM.jpeg',
+        '/Elevations/Residential/LalView.jpg',
+        '/Elevations/Residential/PastorSathiya.jpg',
+        '/Elevations/Residential/FinalLuise.jpg',
+        '/Elevations/Residential/Friend.jpg',
+        '/Elevations/Residential/View-05 (1).jpg',
+        '/Elevations/Residential/IMG-20200318-WA0002.jpg',
+        '/Elevations/Residential/IMG-20200505-WA0003.jpg',
+        '/Elevations/Residential/IMG-20200625-WA0007.jpg',
+        '/Elevations/Residential/WhatsApp Image 2020-11-01 at 10.26.26 PM.jpeg',
+        '/Elevations/Residential/Perum.jpg',
+        '/Elevations/Residential/RessulRaj1.jpg',
+        '/Elevations/Residential/ravi1.jpg',
+        '/Elevations/Residential/VijayaTutorialElevation.jpg',
+        '/Elevations/Residential/VillukuriChiefErNew.jpg',
+        '/Elevations/Residential/ShinolaRani.jpg',
+        '/Elevations/Residential/Padmakumar.jpg',
+        '/Elevations/Residential/WhatsApp Image 2020-10-19 at 7.04.16 AM.jpeg',
+        '/Elevations/Residential/1.jpg',
+        '/Elevations/Residential/2.jpg',
+        '/Elevations/Residential/Alanvilai chandran1.jpg',
+        '/Elevations/Residential/anjugramam.jpg',
       ],
-      'Modern residential elevation',
+      'Residential elevation',
       100,
     ),
   },
   {
     id: 2,
-    title: 'Traditional and Spacious Homes',
-    slug: 'traditional-spacious-homes',
-    category: 'Residential',
-    location: 'Tamil Nadu',
+    title: 'Commercial Elevations',
+    slug: 'commercial-elevations',
+    category: 'Commercial',
+    location: 'Kanyakumari District',
     project_year: 2024,
-    short_description: 'Larger residences with classic rooflines, verandahs, strong entry features, and warm exterior detailing.',
+    short_description: 'Office and commercial frontage concepts designed for visibility, circulation, and daily use.',
     description:
-      'Residential elevation studies for clients looking for a more traditional or expansive home expression. These concepts combine prominent entries, sloped roof forms, terraces, verandahs, and layered facade details suited to family residences.',
+      'Commercial and office elevation concepts with practical facade treatment, stronger street presence, and planning suited for repeated everyday use. The gallery includes office-style buildings and multi-level frontage studies.',
     featured: true,
     status: 'published',
     images: images(
       [
-        '/Elevations/Perum.jpg',
-        '/Elevations/RessulRaj1.jpg',
-        '/Elevations/ravi1.jpg',
-        '/Elevations/VijayaTutorialElevation.jpg',
-        '/Elevations/VillukuriChiefErNew.jpg',
-        '/Elevations/ShinolaRani.jpg',
-        '/Elevations/Padmakumar.jpg',
-        '/Elevations/WhatsApp Image 2020-10-19 at 7.04.16 AM.jpeg',
+        '/Elevations/Commercial/AuditorOffice.jpeg',
+        '/Elevations/Commercial/BishopsOffice.jpg',
+        '/Elevations/Commercial/Vettuvenni (1).jpg',
+        '/Elevations/Commercial/Vettuvenni (2).jpg',
+        '/Elevations/Commercial/View.jpg',
+        '/Elevations/Commercial/newBishops - Copy.jpg',
+        '/Elevations/Commercial/model7.jpg',
       ],
-      'Traditional residential elevation',
+      'Commercial elevation',
       200,
     ),
   },
   {
     id: 3,
-    title: 'Commercial and Office Elevations',
-    slug: 'commercial-office-elevations',
-    category: 'Commercial',
-    location: 'Kanyakumari District',
-    project_year: 2024,
-    short_description: 'Office and commercial frontage concepts designed for visibility, circulation, and everyday utility.',
-    description:
-      'Commercial and office elevation concepts with practical facade treatment, stronger street presence, and planning suited for repeated daily use. The gallery includes office-style buildings and multi-level frontage studies.',
-    featured: true,
-    status: 'published',
-    images: images(
-      [
-        '/Elevations/AuditorOffice.jpeg',
-        '/Elevations/BishopsOffice.jpg',
-        '/Elevations/Vettuvenni (1).jpg',
-        '/Elevations/Vettuvenni (2).jpg',
-        '/Elevations/View.jpg',
-        '/Elevations/newBishops - Copy.jpg',
-        '/Elevations/model7.jpg',
-      ],
-      'Commercial office elevation',
-      300,
-    ),
-  },
-  {
-    id: 4,
-    title: 'Church Elevation Concepts',
-    slug: 'church-elevation-concepts',
-    category: 'Institutional',
+    title: 'Church Elevations',
+    slug: 'church-elevations',
+    category: 'Churches',
     location: 'Tamil Nadu',
     project_year: 2023,
-    short_description: 'Church elevations and worship-space concepts with towers, central entries, and landmark facade forms.',
+    short_description: 'Church and worship-space elevation concepts with towers, landmark entries, and strong identity.',
     description:
-      'Institutional elevation work for churches and worship spaces. These concepts explore tower proportions, central entry treatment, nave frontage, ornamentation, and landmark identity while keeping construction practicality in view.',
-    featured: false,
+      'Church elevation work exploring tower proportions, central entry treatment, nave frontage, ornamentation, and landmark identity while keeping construction practicality in view.',
+    featured: true,
     status: 'published',
     images: images(
       [
@@ -117,39 +102,20 @@ export const projects: Project[] = [
         '/Elevations/Churches/33 copy.jpg',
         '/Elevations/Churches/Mar.jpg',
       ],
-      'Church elevation concept',
-      400,
-    ),
-  },
-  {
-    id: 5,
-    title: 'Client Elevation Studies',
-    slug: 'client-elevation-studies',
-    category: 'Residential',
-    location: 'South India',
-    project_year: 2023,
-    short_description: 'Additional client-specific elevation options covering compact homes, duplexes, and facade studies.',
-    description:
-      'A collection of client-specific elevation studies prepared for different site conditions and design preferences. The gallery shows compact frontage options, duplex-style studies, and facade variations across multiple residential briefs.',
-    featured: false,
-    status: 'published',
-    images: images(
-      [
-        '/Elevations/1.jpg',
-        '/Elevations/2.jpg',
-        '/Elevations/Alanvilai chandran1.jpg',
-        '/Elevations/anjugramam.jpg',
-      ],
-      'Client elevation study',
-      500,
+      'Church elevation',
+      300,
     ),
   },
 ];
 
 export function getProjects() {
-  return projects.filter((project) => project.status !== 'draft');
+  return projects.filter((project) => project.status !== 'draft' && !project.archive);
+}
+
+export function getArchivedProjects() {
+  return projects.filter((project) => project.status !== 'draft' && project.archive);
 }
 
 export function getProject(slug: string) {
-  return getProjects().find((project) => project.slug === slug || String(project.id) === slug) ?? null;
+  return projects.filter((project) => project.status !== 'draft').find((project) => project.slug === slug || String(project.id) === slug) ?? null;
 }

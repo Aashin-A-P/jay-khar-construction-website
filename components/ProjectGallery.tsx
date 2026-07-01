@@ -11,10 +11,10 @@ export function ProjectGallery({ project }: { project: Project }) {
 
   return (
     <div>
-      <img className="aspect-[4/3] w-full rounded object-cover" src={hero} alt={project.title} />
+      <img className="aspect-[4/3] w-full rounded border border-borderdark object-cover" src={hero} alt={project.title} />
       <div className="mt-4 grid grid-cols-4 gap-3">
         {project.images.map((image) => (
-          <button key={image.id} onClick={() => setActive(image.image_path)} className="overflow-hidden rounded border border-stone-200">
+          <button key={image.id} onClick={() => setActive(image.image_path)} className="overflow-hidden rounded border border-borderdark transition hover:border-brass">
             <img className="aspect-square w-full object-cover" src={image.image_path} alt={image.alt_text || project.title} />
           </button>
         ))}

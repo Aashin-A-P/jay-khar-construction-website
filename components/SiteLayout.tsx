@@ -23,19 +23,19 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   const linkClass = (href: string) =>
-    `text-sm font-semibold transition ${isActive(pathname, href) ? 'text-brass' : 'text-ink hover:text-brass'}`;
+    `text-sm font-semibold transition ${isActive(pathname, href) ? 'text-brass' : 'text-ivory/82 hover:text-brass'}`;
 
   return (
-    <div className="min-h-screen bg-[#fbfaf7]">
-      <header className="sticky top-0 z-40 border-b border-stone-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-3">
-            <span className="grid h-14 w-14 place-items-center overflow-hidden rounded bg-white shadow-sm ring-1 ring-stone-200">
-              <img className="h-12 w-12 object-contain" src="/jk-logo.svg" alt="Jay-Khar Construction logo" />
+    <div className="min-h-screen bg-ink text-ivory">
+      <header className="sticky top-0 z-40 border-b border-borderdark bg-ink/95 backdrop-blur">
+        <div className="mx-auto flex h-28 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
+          <Link href="/" className="flex min-w-0 items-center gap-5">
+            <span className="grid h-28 w-20 shrink-0 place-items-center">
+              <img className="h-full w-full -translate-y-3 object-contain" src="/logojk.png" alt="Jay-Khar Construction logo" />
             </span>
-            <span>
-              <span className="block font-display text-lg font-extrabold leading-tight text-ink">Jay-Khar</span>
-              <span className="block text-xs font-bold uppercase tracking-[0.16em] text-steel">Construction Pvt. Ltd.</span>
+            <span className="min-w-0">
+              <span className="block font-display text-3xl font-extrabold leading-none text-ivory sm:text-4xl">Jay-Khar</span>
+              <span className="mt-2 block whitespace-nowrap text-sm font-bold uppercase tracking-[0.22em] text-steel sm:text-base">Construction Pvt. Ltd.</span>
             </span>
           </Link>
           <nav className="hidden items-center gap-8 lg:flex">
@@ -49,7 +49,7 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
             <FileText size={16} /> Get a Quote
           </Link>
           <button
-            className="grid h-11 w-11 place-items-center rounded border border-stone-200 lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded border border-borderdark text-ivory lg:hidden"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -57,7 +57,7 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
           </button>
         </div>
         {open && (
-          <div className="border-t border-stone-200 bg-white px-5 py-4 lg:hidden">
+          <div className="border-t border-borderdark bg-graphite px-5 py-4 lg:hidden">
             <div className="flex flex-col gap-4">
               {nav.map(([label, href]) => (
                 <Link key={href} href={href} onClick={() => setOpen(false)} className={linkClass(href)}>
@@ -72,7 +72,7 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
         )}
       </header>
       <main>{children}</main>
-      <footer className="bg-ink text-white">
+      <footer className="border-t border-borderdark bg-ink text-ivory">
         <div className="section grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <h2 className="font-display text-2xl font-extrabold">Jay-Khar Construction</h2>

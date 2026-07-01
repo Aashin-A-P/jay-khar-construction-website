@@ -14,7 +14,7 @@ const contactItems = [
 function Field({ label, children, span = false }: { label: string; children: ReactNode; span?: boolean }) {
   return (
     <label className={span ? 'sm:col-span-2' : ''}>
-      <span className="mb-2 block text-sm font-bold text-ink">{label}</span>
+      <span className="mb-2 block text-sm font-bold text-ivory">{label}</span>
       {children}
     </label>
   );
@@ -46,21 +46,21 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="bg-cement">
+      <section className="bg-graphite">
         <div className="section">
           <p className="eyebrow">Contact</p>
-          <h1 className="mt-4 font-display text-5xl font-extrabold text-ink">Start your construction conversation.</h1>
+          <h1 className="mt-4 font-display text-5xl font-extrabold text-ivory">Start your construction conversation.</h1>
         </div>
       </section>
       <section className="section grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="space-y-6">
           {contactItems.map(({ Icon, label, value, href }) => (
-            <div className="flex gap-4 rounded border border-stone-200 bg-white p-5" key={label}>
+            <div className="flex gap-4 rounded border border-borderdark bg-graphite p-5" key={label}>
               <Icon className="text-brass" size={24} />
               <div>
                 <p className="text-sm font-bold text-steel">{label}</p>
                 {href ? (
-                  <a className="mt-1 block break-all font-semibold text-ink transition hover:text-brass" href={href}>
+                  <a className="mt-1 block break-all font-semibold text-ivory transition hover:text-brass" href={href}>
                     {value}
                   </a>
                 ) : (
@@ -76,11 +76,11 @@ export default function ContactPage() {
             loading="lazy"
           />
         </div>
-        <form onSubmit={submit} className="overflow-hidden rounded border border-stone-200 bg-white shadow-lift">
-          <div className="border-b border-stone-200 bg-ink px-6 py-6 text-white">
+        <form onSubmit={submit} className="overflow-hidden rounded border border-borderdark bg-graphite shadow-lift">
+          <div className="border-b border-borderdark bg-forest px-6 py-6 text-ivory">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-brass">Project enquiry</p>
             <h2 className="mt-2 font-display text-3xl font-extrabold">Tell us what you want to build.</h2>
-            <p className="mt-3 max-w-xl text-sm leading-6 text-white/72">Share the basics and our team will get back with the right next step.</p>
+            <p className="mt-3 max-w-xl text-sm leading-6 text-ivory/72">Share the basics and our team will get back with the right next step.</p>
           </div>
           <div className="grid gap-5 p-6 sm:grid-cols-2">
             <Field label="Your name">
@@ -120,7 +120,7 @@ export default function ContactPage() {
               <textarea className="input" name="message" rows={7} placeholder="Location, plot size, expected timeline, and anything important for us to know." required />
             </Field>
           </div>
-          <div className="border-t border-stone-200 bg-cement/60 p-6">
+          <div className="border-t border-borderdark bg-ink p-6">
             <FormStatus {...status} />
             <button className="btn-primary mt-4 w-full sm:w-auto" type="submit">
               Send Enquiry <ArrowRight size={18} />

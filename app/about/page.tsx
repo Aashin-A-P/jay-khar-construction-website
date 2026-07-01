@@ -30,11 +30,11 @@ const leaders = [
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-cement">
+      <section className="bg-graphite">
         <div className="section grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <p className="eyebrow">About Us</p>
-            <h1 className="mt-4 font-display text-5xl font-extrabold text-ink">Professional construction with personal attention.</h1>
+            <h1 className="mt-4 font-display text-5xl font-extrabold text-ivory">Professional construction with personal attention.</h1>
           </div>
           <div className="space-y-5 text-lg leading-8 text-steel">
             <p>
@@ -51,39 +51,39 @@ export default function AboutPage() {
       <section className="section">
         <div className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">Leadership</p>
-          <h2 className="mt-4 font-display text-4xl font-extrabold text-ink">Meet the people behind Jay-Khar Construction.</h2>
+          <h2 className="mt-4 font-display text-4xl font-extrabold text-ivory">Meet the people behind Jay-Khar Construction.</h2>
         </div>
         <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_1fr_0.9fr]">
           {leaders.map((leader, index) => (
             <article
-              className={`rounded-[2rem] border border-stone-200 p-7 text-center shadow-sm ${index === 0 ? 'bg-cement' : 'bg-white'}`}
+              className={`rounded-[2rem] border border-borderdark p-7 text-center shadow-sm ${index === 0 ? 'bg-forest' : 'bg-graphite'}`}
               key={leader.name}
             >
-              <div className={`mx-auto grid aspect-square w-40 place-items-center rounded-[2rem] ${index === 0 ? 'bg-white' : 'bg-cement'}`}>
+              <div className="mx-auto grid aspect-square w-40 place-items-center rounded-[2rem] bg-ink">
                 <span className="font-display text-5xl font-extrabold text-brass">{leader.initials}</span>
               </div>
               <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-brass">{leader.role}</p>
-              <h3 className="mt-2 font-display text-2xl font-extrabold text-ink">{leader.name}</h3>
+              <h3 className="mt-2 font-display text-2xl font-extrabold text-ivory">{leader.name}</h3>
               <p className="mt-3 text-sm font-semibold leading-6 text-steel">{leader.qualification}</p>
-              <a className="mt-5 inline-block font-bold text-ink transition hover:text-brass" href={leader.phoneHref}>
+              <a className="mt-5 inline-block font-bold text-ivory transition hover:text-brass" href={leader.phoneHref}>
                 Mob: {leader.phone}
               </a>
             </article>
           ))}
-          <article className="rounded border border-stone-200 bg-ink p-7 text-white shadow-sm">
+          <article className="rounded border border-borderdark bg-ink p-7 text-ivory shadow-sm">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-brass">Company Details</p>
             <h2 className="mt-3 font-display text-3xl font-extrabold">Jay-Khar Construction Pvt. Ltd.</h2>
-            <p className="mt-4 leading-7 text-white/75">5/116, Railway Station Road, Marthandam, K.K. Dist - 629 165.</p>
+            <p className="mt-4 leading-7 text-ivory/75">5/116, Railway Station Road, Marthandam, K.K. Dist - 629 165.</p>
             <div className="mt-5 space-y-2 text-sm font-semibold">
               <p>
                 Email:{' '}
-                <a className="text-brass transition hover:text-white" href="mailto:jay_khar@yahoo.com">
+                <a className="text-brass transition hover:text-ivory" href="mailto:jay_khar@yahoo.com">
                   jay_khar@yahoo.com
                 </a>
               </p>
               <p>
                 Website:{' '}
-                <a className="text-brass transition hover:text-white" href="https://www.jaykharconstruction.com">
+                <a className="text-brass transition hover:text-ivory" href="https://www.jaykharconstruction.com">
                   www.jaykharconstruction.com
                 </a>
               </p>
@@ -93,20 +93,20 @@ export default function AboutPage() {
       </section>
       <section className="section grid gap-6 md:grid-cols-4">
         {values.map(([title, Icon, copy]) => (
-          <div className="rounded border border-stone-200 bg-white p-6" key={title}>
+          <div className="rounded border border-borderdark bg-graphite p-6" key={title}>
             <Icon className="text-brass" size={28} />
-            <h2 className="mt-5 font-display text-xl font-extrabold">{title}</h2>
+            <h2 className="mt-5 font-display text-xl font-extrabold text-ivory">{title}</h2>
             <p className="mt-3 text-sm leading-6 text-steel">{copy}</p>
           </div>
         ))}
       </section>
-      <section className="bg-ink text-white">
+      <section className="bg-forest text-ivory">
         <div className="section grid gap-10 lg:grid-cols-2">
           <img className="h-full min-h-[360px] rounded object-cover" src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80" alt="Construction planning" />
           <div className="self-center">
             <p className="eyebrow">How We Work</p>
             <h2 className="mt-4 font-display text-4xl font-extrabold">Clear stages from concept to completion.</h2>
-            <div className="mt-8 space-y-5 text-white/75">
+            <div className="mt-8 space-y-5 text-ivory/75">
               <p>We begin by understanding the client's requirements, budget, and vision. The team then prepares plans, estimates, design options, and construction steps that make the project easier to follow.</p>
               <p>During execution, engineers supervise site progress, review materials, coordinate labour, and keep clients informed with regular updates until handover.</p>
             </div>

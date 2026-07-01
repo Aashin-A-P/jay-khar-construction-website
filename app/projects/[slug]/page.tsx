@@ -24,9 +24,9 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         <ProjectGallery project={project} />
         <div>
           <p className="eyebrow">{project.category}</p>
-          <h1 className="mt-4 font-display text-5xl font-extrabold text-ink">{project.title}</h1>
+          <h1 className="mt-4 font-display text-5xl font-extrabold text-ivory">{project.title}</h1>
           <p className="mt-5 text-lg leading-8 text-steel">{project.description}</p>
-          <dl className="mt-8 grid gap-4 rounded border border-stone-200 bg-white p-6">
+          <dl className="mt-8 grid gap-4 rounded border border-borderdark bg-graphite p-6 text-ivory">
             <div>
               <dt className="text-xs font-bold uppercase tracking-[0.16em] text-steel">Location</dt>
               <dd className="mt-1 font-semibold">{project.location || 'Available on request'}</dd>
